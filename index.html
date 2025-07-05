@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-    <title>Activity Finder</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="widht=device-widht, initial-scale=1.0">
-    <title>Activity Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="task">
-        <button id="rnd-act-btn">Randomize Activity</button>
-        <div id="activity"></div>
-    </div>    
-</body>
-<script src="https://code.jquery.com/jquery-3.6.0min.js"></script>
-<script src="script.js"></script>
+    <header>
+        <h1>Marketplace</h1>
+        <div id="cart">
+            <buton id="cart-button" onclick="openCart()">
+                <img src="img/cart.png" alt="cart">
+            </buton>
+            <div id="cart-products" class="hide">
+                Cart is empty
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="products-grid">
 
+        </div>
+    </main>
+</body>    
+<script src="script.js" defer></script>
 </html>
