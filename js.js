@@ -1,7 +1,7 @@
 let productsGrid = document.getElementById('products-grid');
 let productsArray =[]
 let xhr = new XMLHttpRequest();
-let url = 'https://my-json-server.typicode.com/ImRuslan/marketplace';
+let url = 'https://my-json-server.typicode.com/Mark1906/second-new';
 
 xhr.open('GET',url + '/products');
 xhr.responseType = 'json'
