@@ -1,5 +1,5 @@
 let productsGrid = document.getElementById('products-grid');
-let productsArray =[]
+let productsArray =[];
 let xhr = new XMLHttpRequest();
 let url = 'https://my-json-server.typicode.com/Mark1906/second-new';
 
