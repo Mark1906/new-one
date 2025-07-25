@@ -19,7 +19,7 @@ header {
     gap: 1rem;
 }
 
-product {
+.product {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem;
     border-radius: 1rem;
