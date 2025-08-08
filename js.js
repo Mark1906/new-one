@@ -19,9 +19,54 @@ xhr.onload=function(){
         <img class='product-photo' src='${p.photo_url}' alt ='${p.name}'>
         <p class='product-price><b>Price: </b>${p.prise}$</p>
         <p class='product-description><b>Description: </b>${p.description}$</p>
-        <a href='userProfile.html?id=${p.author_id}'>Seller profile</a>
-        <button>Buy</button>`;
+        <br>
+        <button onclick="addProductToCart('${p._id}')">Buy</button>
+        `;
         productsGrid.append(pElem);
         });
 }
 xhr.send();
+
+let cartProd = document.getElementById('cart-products');
+
+let cart = [];
+if(localStorage.getItem('cart')) {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    drawCartProducts();
+}
+
+function deletProductToCart() {
+cart = [];
+      cartProd.innerHTML ='Корзина очишчена';
+      localStorage.setItem("cart", '[]');    
+}
+
+function addProductToCart(id) {
+    let product = productsArray.find(function(p) {
+        return p._id == id;
+    })
+    cart.push(product);
+    drawCartProducts();
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    document.getElementById('cart-button').classList.add('active');
+    setTimeout(function(){
+        document.getElementById('cart-button').classList.remove('active');
+    },500);
+}
+
+function drawCartProducts() {
+    if(cart.length === 0) return cartProd.innerHTML = 'Cart is empty';
+    cartProd.innerHTML = null;
+    let sum = 0;
+    cart.forEach(function(p){
+        cartProd.innerHTML +=`
+            <p><img src="${p.photo_url}"> ${p.name} |${p.price}PLN</p>
+            <hr>          
+        `;
+        sum += +p.price;
+    });
+    cartProd.innerHTML +=`
+        <p>Сума:
+    `;
+}
