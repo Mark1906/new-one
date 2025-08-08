@@ -68,6 +68,24 @@ function drawCartProducts() {
     });
     cartProd.innerHTML +=`
         <p>Сума: ${sum}PLN</p>
-        <button onclick="buyAll
+        <button onclick="buyAll()">Купити все</button>
+        <button onclick="deleteAll()">Очистити кошик</button>
     `;
+}
+
+function buyAll() {
+    model.style.display = "block";
+    let sum = 0;
+    orderBlock.innerHTML = null;
+
+    cart.forEach(function(p){ 
+    orderBlock.innerHTML += `
+        <div class="item">
+             <img width="100px" src="${p.photo_url}">
+             <h2>${p.name} | ${p.price}PLN</h2>
+        </div>     
+    `;
+    sum += +p.price;
+   }); 
+   document.getElementById('price').innerHTML = sum + 'PLN'; 
 }
