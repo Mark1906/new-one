@@ -82,3 +82,51 @@ button {
 .hide {
     display: none;
 }
+
+#cart-button.active {
+    background-color: rgb(170, 255, 170);
+}
+
+#cart-products::before {
+    content: '';
+    border: transparent solid 16px;
+    border-bottom: solid #000 16px;
+    position: relative;
+    top: -2.7rem;
+    left: 15.8rem;
+    z-index: -1;
+}
+
+#cart-products {
+    border: 1px solid #000;
+    border-radius: 0.5rem;
+    background-color: #ffffff;
+    top: 59px;
+    right: 0rem;
+    left: -16rem;
+    position: absolute;
+    padding: 10px;
+    text-align: left;
+}
+
+#cart-products p {
+    line-height: 2rem;
+}
+
+#cart-products p img {
+    max-height: 2rem;
+    max-width: 2rem;
+}
+
+#cart-products button {
+    border: 1px solid #000;
+    margin: 0.5rem 0;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
