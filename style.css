@@ -78,3 +78,7 @@ button {
 #cart-button:hover {
     background-color: rgb(170, 170, 250);
 }
+
+.hide {
+    display: none;
+}
