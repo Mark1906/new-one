@@ -67,7 +67,7 @@ function drawCartProducts() {
             <p><img src="${p.photo_url}"> ${p.name} |${p.price}PLN</p>
             <hr>          
         `;
-        sum += +p.price;
+        sum += p.price;
     });
     cartProd.innerHTML +=`
         <p>Сума: ${sum}PLN</p>
