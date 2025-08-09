@@ -9,7 +9,7 @@ xhr.responseType='json'
 xhr.onload=function(){
     let products=xhr.response;
     productsGrid.innerHTML=null;
-    productsArray.forEach(p=>{
+    products.forEach(p=>{
         productsArray.push(p);
         let pElem=document.createElement('div');
         pElem.classList.add('product'
