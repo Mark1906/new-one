@@ -8,8 +8,6 @@ xhr.setRequestHeader("content-type", "application/json");
 xhr.setRequestHeader("x-apikey", "68bc1846b349a356684b6ded");
 xhr.setRequestHeader("cache-control", "no-cache");
 
-xhr.send(data);
-
 xhr.responseType='json'
 xhr.onload=function(){
     let products=xhr.response;
