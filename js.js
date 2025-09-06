@@ -1,10 +1,15 @@
 let productsGrid=document.getElementById('products-grid');
 let productsArray=[];
 let xhr =new XMLHttpRequest();
-let url = 'https://my-json-server.typicode.com/Mark1906/second-new';
+let url = 'https://hellomynameis2000-9bc3.restdb.io/rest';
+xhr.open('GET',url + '/product');
 
+xhr.setRequestHeader("content-type", "application/json");
+xhr.setRequestHeader("x-apikey", "68bc1846b349a356684b6ded");
+xhr.setRequestHeader("cache-control", "no-cache");
 
-xhr.open('GET',url + '/products');
+xhr.send(data);
+
 xhr.responseType='json'
 xhr.onload=function(){
     let products=xhr.response;
