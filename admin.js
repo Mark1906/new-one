@@ -24,7 +24,7 @@ productForm.addEventListener('submit', function(event){
 
 xhr.open("POST", "https://hellomynameis2000-9bc3.restdb.io/rest/product");
 xhr.setRequestHeader("content-type", "applification/json");
-xhr.setRequestHeader("x-apikey", "63f1dd07478852088da68441");
+xhr.setRequestHeader("x-apikey", "68bc1846b349a356684b6ded");
 xhr.setRequestHeader("cache-control", "no-cache");
 
 xhr.send(data);
