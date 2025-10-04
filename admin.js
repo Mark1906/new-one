@@ -22,7 +22,7 @@ productForm.addEventListener('submit', function(event){
         }
 };
 
-xhr.open("POST", "https://newdatabase-f3aa.restdb.io/rest/product");
+xhr.open("POST", "https://hellomynameis2000-9bc3.restdb.io/rest/product");
 xhr.setRequestHeader("content-type", "applification/json");
 xhr.setRequestHeader("x-apikey", "63f1dd07478852088da68441");
 xhr.setRequestHeader("cache-control", "no-cache");
@@ -34,10 +34,10 @@ xhr.send(data);
 let orders = document.getElementById('admin_page_orders');
 
 let xhr = new XMLHttpRequest();
-xhr.open("GET", "https://newdatabase-f3aa.restdb.io/rest/orders");
+xhr.open("GET", "https://hellomynameis2000-9bc3.restdb.io/rest/orders");
 xhr.responseType = 'json'
 xhr.setRequestHeader("content-type", "applification/json");
-xhr.setRequestHeader("x-apikey", "63f1dd07478852088da68441");
+xhr.setRequestHeader("x-apikey", "68bc1846b349a356684b6ded");
 xhr.setRequestHeader("cache-control", "no-cache");
 
 xhr.onload = function() {
@@ -89,9 +89,9 @@ function complete(id) {
         }
     }
 
-    xhr.open("PUT", "https://newdatabase-f3aa.restdb.io/rest/orders"+id);
+    xhr.open("PUT", "https://hellomynameis2000-9bc3.restdb.io/rest/orders"+id);
     xhr.setRequestHeader("content-type", "applification/json");
-    xhr.setRequestHeader("x-apikey", "63f1dd07478852088da68441");
+    xhr.setRequestHeader("x-apikey", "68bc1846b349a356684b6ded");
     xhr.setRequestHeader("cache-control", "no-cache");
 
     xhr.send(data);
