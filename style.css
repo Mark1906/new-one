@@ -9,8 +9,12 @@ main, header {
 }
 
 header {
+    color: #fefefe;
     display: flex;
     justify-content: space-between;
+    padding: 30px 50px;
+    border-radius: 5% 10% ;
+    background-image: url(img/images.jpg);
 }
 
 #products-grid {
@@ -51,7 +55,24 @@ button {
     min-width: 50%;
 }
 
-/*-----Cat----*/
+nav {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.admin_page_link {
+    color: #ffffff;
+    background-color: #000;
+    padding: 0.75rem 0.5rem;
+    border: 1px solid #ffffff;
+}
+
+.admin_page_link:hover {
+    color: #000;
+    background-color: #ffffff;
+    border: 1px solid #000;
+}
 
 #cart-button {
     background: none;
@@ -77,10 +98,6 @@ button {
 
 #cart-button:hover {
     background-color: rgb(170, 170, 250);
-}
-
-.hide {
-    display: none;
 }
 
 #cart-button.active {
@@ -109,6 +126,10 @@ button {
     text-align: left;
 }
 
+.hide {
+    display: none;
+}
+
 #cart-products p {
     line-height: 2rem;
 }
@@ -129,7 +150,64 @@ button {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-}   
+} 
+
+#profile {
+    background-color: tomato;
+    padding: 1rem 3rem;
+    flex-basis: 20rem;
+    text-align: center;
+    border-radius: 1rem;
+}
+
+.profile-img {
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 0 #000;
+    width: 10rem;
+    margin: 2rem 0;
+    background-color: #ffffff;
+}
+
+.products-link {
+    font-size: 2rem;
+    color: #000;
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.products-link:hover {
+    transform: scale(1.2);
+}
+
+.user-products {
+    position: relative;
+}
+
+.user-products h1 {
+    position: absolute;
+    left: 2rem;
+    top: -1.2rem;
+    color: #ffffff;
+    text-shadow: 0 0 10px #000;
+}
+
+#user-products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: tomato;
+    padding: 2rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+
+.form-group {
+    margin: 0.2rem 0;
+}
+
+.form-group label {
+    display: block;
+}
+    
     
 .modal {
 display: none;
@@ -197,7 +275,33 @@ font-size: 1.5rem;
 padding: 0.4rem 1rem;
 }
 
-#add_product form textarea{ 
+#add_product form textarea { 
 font-size: 1.5rem;
 padding: 0.4rem 1rem;
+}
+
+.admin_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#admin_page_orders .product *{
+    font-weight: 500;
+    padding: 0.2rem 0;
+}
+
+#admin_page_orders .product {
+    margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 1000px){
+    #products-grid, #user-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px){
+    #products-grid, #user-products-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
